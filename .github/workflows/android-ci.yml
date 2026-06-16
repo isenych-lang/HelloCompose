@@ -1,0 +1,14 @@
+name: Android CI
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ develop, main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Fake Build
+        run: echo "Gradle build simulated successfully!"
